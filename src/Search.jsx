@@ -26,7 +26,7 @@ function Search() {
     setIsLoading(true);
 
     try {
-      const response = await axios.get('http://localhost:5000/search', {
+      const response = await axios.get('https://movie-backend-6mu4.onrender.com/search', {
         params: { query: query.trim() },
       });
 
