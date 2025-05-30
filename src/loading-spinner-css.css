@@ -1,0 +1,20 @@
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 24px;
+  color: #333;
+}
+
+.error-container {
+  text-align: center;
+  margin-top: 50px;
+  color: #ff0000;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 20px;
+  font-weight: bold;
+}

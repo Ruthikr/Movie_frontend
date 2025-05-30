@@ -1,0 +1,296 @@
+/* Container for the entire movie details page */
+
+.movie-details {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1f2933; /* Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color:white;
+  text-align: left;
+}
+
+/* Styling the movie poster image */
+.movie-details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Movie title */
+.movie-details h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center; /* Center align title */
+}
+
+/* General text (plot overview, release date, etc.) */
+.movie-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: white;
+  line-height: 1.5;
+  
+}
+
+/* Genre and Rating Styling */
+.movie-details p strong {
+  color: white;
+}
+.movie-details p b{
+  color:#e63946;
+}
+/* List of platforms where the movie is available */
+.movie-details ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual list items */
+.movie-details ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Links to streaming platforms */
+.movie-details ul li a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none;
+  font-weight: bold;
+  word-wrap: break-word; /* Prevent links from overflowing */
+  display: inline-block; /* Make links fit inside the container */
+  max-width: 100%; /* Ensure links do not overflow */
+  font-size: 10px;
+}
+
+.movie-details ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker blue for hover state */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .movie-details {
+    padding: 15px;
+    
+  }
+
+  .movie-details h2 {
+    font-size: 1.8rem;
+  }
+
+  .movie-details p {
+    font-size: 1rem;
+  }
+
+  .movie-details ul li {
+    font-size: 0.9rem;
+  }
+
+  .movie-details ul li a {
+    font-size: 0.9rem;
+  }
+}
+
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0px;
+ 
+}
+
+button:hover {
+  background-color: #d62828;
+}
+
+/* Trailer embedded player */
+.trailer-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Thumbnail styling */
+.trailer-thumbnail {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.trailer-thumbnail img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+/* MovieDetails.css */
+/*
+.movie-details {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}*/
+
+.movie-details img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trailer-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.trailer-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.movie-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.movie-details ul li {
+  margin: 5px 0;
+}
+
+.movie-details a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+.movie-details a:hover {
+  text-decoration: underline;
+}
+
+.trailer-thumbnail {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.trailer-thumbnail:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+#yt{
+  color:#e63946;
+  text-align: center;
+}
+
+#mtitle{
+  font-size:2.5rem;
+  
+}
+
+
+
+h2 {
+   /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  color: #007bff; /* Text color */
+  margin-bottom: 0px;
+  animation: bounce 1.5s infinite; /* Bounce animation */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+ h2 {
+   /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #007bff, #ff7f50); /* Gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+#t{
+  font-size:0.8rem;
+ font-weight: bold;
+  text-align: center;
+  
+ /* background: linear-gradient(90deg, #007bff, #ff7f50);Gradient colors */
+  background: linear-gradient(to right, #ff9999, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  
+  animation: bounce2 1s infinite;*/ /* Bounce animation */
+}
+@keyframes bounce2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+#t i{
+  font-size:1rem;
+  margin-bottom: 10px;
+}
+#pt{
+  font-size: 0.8rem;
+  text-align: center;
+  background: linear-gradient(to right, #ff9999, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+/* In your CSS file or within <style> tags */
+.light-hr {
+  border:0.1px solid grey;
+  height:1px;
+  
+}
+
+#under{
+  
+  color:#e63946;
+
+}
+
+
+.movie-overview{
+  font-weight:0;
+  
+}
+.movie-info{
+  margin:50px 0px;
+}
