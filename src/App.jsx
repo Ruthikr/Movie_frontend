@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Search from './Search';
@@ -7,11 +8,10 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App bg-primary-bg text-text-primary min-h-screen">
+      <div className="App">
         <Routes>
           <Route path="/" element={<Search />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
-          <Route path="*" element={<div>Page not found</div>} />
         </Routes>
       </div>
     </Router>
