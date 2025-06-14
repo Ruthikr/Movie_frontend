@@ -17,11 +17,8 @@
 }
 
 .movie-card {
-  padding: 10px;
-  background-color: #1f2933;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  @apply p-2 bg-secondary-bg rounded-lg text-center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* TODO: Update shadow color if needed */
 }
 
 .movie-card img {
@@ -35,39 +32,25 @@
 }
 
 .movie-card a {
-  color: var(--primary-color);
-  text-decoration: none;
-font-size:0.9rem;
-  
-
-  
-  
+  @apply text-accent no-underline text-sm;
 }
 
 .movie-card a:hover {
-  text-decoration: underline;
+  @apply underline;
 }
 
 .movie-card p {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  @apply text-sm font-bold mb-2;
 }
 
 /* Error message styles */
 .error-message {
-  color: red;
-  font-weight: bold;
+  @apply text-red-500 font-bold;
 }
 
 .search-container h1 {
-   /* Adjust size as needed */
-  font-weight: bold;
-  text-align: center;
-  color: #007bff; /* Text color */
-  margin-top: 10px;
-  margin-bottom:10px;
- /*animation: bounce 2s infinite;*/ 
+  @apply font-bold text-center text-accent mt-2 mb-2;
+ /*animation: bounce 2s infinite;*/
 /* Bounce animation */
 }
 
@@ -81,17 +64,11 @@ font-size:0.9rem;
 }
 
 .search-container h1 {
-   /* Adjust size as needed */
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(90deg, #007bff, #ff7f50); /* Gradient colors */
+  @apply font-bold text-center mb-2;
+  background: linear-gradient(90deg, var(--tw-color-accent), #ff7f50); /* Gradient colors */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
 }
-
-
-
 
 .loading-spinner {
   display: flex;
@@ -105,7 +82,7 @@ font-size:0.9rem;
   width: 80px;
   height: 80px;
   border: 8px solid transparent;
-  border-top-color: #3498db; /* Primary color */
+  @apply border-t-accent; /* Primary color */
   border-radius: 50%;
   position: relative;
   background: radial-gradient(circle, rgba(0,0,0,0.1) 50%, transparent 50%);
@@ -120,7 +97,7 @@ font-size:0.9rem;
   left: 50%;
   width: 20px;
   height: 20px;
-  background: #e74c3c; /* Accent color */
+  @apply bg-accent; /* Accent color */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: pulse 1.5s ease-in-out infinite;
@@ -151,23 +128,17 @@ font-size:0.9rem;
 
 
 .error-container {
-  text-align: center;
-  margin-top: 50px;
-  color: #ff0000;
+  @apply text-center mt-12 text-red-500;
 }
 
 .error-message {
-  color: #ff0000;
-  margin-top: 20px;
-  font-weight: bold;
+  @apply text-red-500 mt-5 font-bold;
 }
 
-
 #date{
-  font-weight:1000;
+  font-weight:1000; /* TODO: Consider using Tailwind's font-weight utilities */
 }
 
 #link{
-  color:#e0e0e0;
-  text-decoration: none;
+  @apply text-text-primary no-underline;
 }
