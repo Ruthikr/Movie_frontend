@@ -4,12 +4,8 @@
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #1f2933; /* Light background for contrast */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  color:white;
-  text-align: left;
+  @apply bg-secondary-bg text-text-primary rounded-lg shadow-lg text-left;
+  font-family: Arial, sans-serif; /* TODO: Consider removing if global font is sufficient */
 }
 
 /* Styling the movie poster image */
@@ -22,27 +18,22 @@
 
 /* Movie title */
 .movie-details h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: white;
-  text-align: center; /* Center align title */
+  font-size: 2rem; /* TODO: Consider Tailwind's font size utilities */
+  @apply mb-2 text-text-primary text-center;
 }
 
 /* General text (plot overview, release date, etc.) */
 .movie-details p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: white;
-  line-height: 1.5;
-  
+  font-size: 1rem; /* TODO: Consider Tailwind's font size utilities */
+  @apply mb-2 text-text-primary leading-relaxed;
 }
 
 /* Genre and Rating Styling */
 .movie-details p strong {
-  color: white;
+  @apply text-text-primary;
 }
 .movie-details p b{
-  color:#e63946;
+  @apply text-accent;
 }
 /* List of platforms where the movie is available */
 .movie-details ul {
@@ -58,18 +49,15 @@
 
 /* Links to streaming platforms */
 .movie-details ul li a {
-  color: #007bff; /* Blue color for links */
-  text-decoration: none;
-  font-weight: bold;
+  @apply text-accent no-underline font-bold;
   word-wrap: break-word; /* Prevent links from overflowing */
   display: inline-block; /* Make links fit inside the container */
   max-width: 100%; /* Ensure links do not overflow */
-  font-size: 10px;
+  font-size: 0.625rem; /* Equivalent to 10px, TODO: use Tailwind's font size utilities */
 }
 
 .movie-details ul li a:hover {
-  text-decoration: underline;
-  color: #0056b3; /* Darker blue for hover state */
+  @apply underline text-teal-700; /* Assuming accent is teal, adjust if blue */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -97,18 +85,11 @@
 }
 
 button {
-  background-color: #e63946;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 0px;
- 
+  @apply bg-accent text-white py-2 px-4 border-none rounded cursor-pointer mb-0;
 }
 
 button:hover {
-  background-color: #d62828;
+  @apply bg-teal-700; /* Assuming accent is teal, adjust if blue */
 }
 
 /* Trailer embedded player */
@@ -175,12 +156,11 @@ button:hover {
 }
 
 .movie-details a {
-  color: #2a7ae2;
-  text-decoration: none;
+  @apply text-accent no-underline;
 }
 
 .movie-details a:hover {
-  text-decoration: underline;
+  @apply underline;
 }
 
 .trailer-thumbnail {
@@ -197,8 +177,7 @@ button:hover {
 
 
 #yt{
-  color:#e63946;
-  text-align: center;
+  @apply text-accent text-center;
 }
 
 #mtitle{
@@ -210,10 +189,7 @@ button:hover {
 
 h2 {
    /* Adjust size as needed */
-  font-weight: bold;
-  text-align: center;
-  color: #007bff; /* Text color */
-  margin-bottom: 0px;
+  @apply font-bold text-center text-accent mb-0;
   animation: bounce 1.5s infinite; /* Bounce animation */
 }
 
@@ -228,12 +204,10 @@ h2 {
 
  h2 {
    /* Adjust size as needed */
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(90deg, #007bff, #ff7f50); /* Gradient colors */
+  @apply font-bold text-center mb-7;
+  background: linear-gradient(90deg, var(--tw-color-accent), #ff7f50); /* Gradient colors */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 30px;
 }
 
 
@@ -246,7 +220,8 @@ h2 {
   text-align: center;
   
  /* background: linear-gradient(90deg, #007bff, #ff7f50);Gradient colors */
-  background: linear-gradient(to right, #ff9999, #ff0000);
+  background: linear-gradient(to right, var(--tw-color-accent), #ff0000); /* TODO: Update second color in gradient */
+  background: linear-gradient(to right, var(--tw-color-accent), #ff0000); /* TODO: Update second color in gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -275,15 +250,11 @@ h2 {
 }
 /* In your CSS file or within <style> tags */
 .light-hr {
-  border:0.1px solid grey;
-  height:1px;
-  
+  @apply border-text-secondary h-px;
 }
 
 #under{
-  
-  color:#e63946;
-
+  @apply text-accent;
 }
 
 

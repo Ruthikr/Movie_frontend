@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App bg-primary-bg text-text-primary min-h-screen">
         <Routes>
           <Route path="/" element={<Search />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
